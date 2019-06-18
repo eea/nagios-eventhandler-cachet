@@ -6,8 +6,10 @@ if ($argc != 6) {
 	exit(1);
 }
 
-$cachet_url = 'https://xxxxx/api/v1/';
-$api_key = 'xxxxx';
+
+$cachet_url = 'http://cachet2.devel4cph.eea.europa.eu/api/v1/';
+$api_key = '3vEADJgVSyXTmifs1Vk2';
+
 
 $incident_prefix = '[Nagios]';
 $cachet_notify_subscribers = true; // Enable subscribers notifcation for incidents creation and updates
