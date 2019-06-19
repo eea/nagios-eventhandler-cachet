@@ -139,7 +139,7 @@ if ($service_status == 'WARNING' && ($service_status_type == 'SOFT' || $service_
 } elseif ($service_status == 'CRITICAL' && $service_status_type == 'HARD') { // Something went wrong, let's notify
 	echo 'KO HARD: creating incident' . "\n";
 	$query = array(
-		'name' => $incident_prefix . ' ' . $cachet_incident_subject. " **Watching**",
+		'name' => $incident_prefix . ' ' . $cachet_incident_subject. " **Investigating**",
 		'message' => $cachet_incident_message,
 		'status' => CACHET_STATUS_INVESTIGATING,
 		'visible' => $cachet_incident_visible,
