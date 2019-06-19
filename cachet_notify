@@ -6,6 +6,8 @@ if ($argc != 6) {
 	exit(1);
 }
 
+date_default_timezone_set('Europe/Copenhagen');
+
 $cachet_url = 'https://xxxxx/api/v1/';
 $api_key = 'xxxxx';
 
@@ -19,11 +21,12 @@ $service_status = $argv[3];
 $service_status_type = $argv[4];
 $service_output = $argv[5];
 
+
 $cachet_incident_subject="Issues with " . $cachet_component . ".";
-$cachet_incident_message="We have detected a problem and we are currently looking into it.\n\n`" . date("D, d M Y G:i") . "`";
+$cachet_incident_message="We have detected a problem and we are currently looking into it.\n\n`" . date("D, d M Y G:i T") . "`";
 
 $cachet_incident_fixed_subject="Issues with " . $cachet_component . " have been **resolved**.";
-$cachet_incident_fixed_message="**Resolved** - The service is back online.\n\n`" . date("D, d M Y G:i") . "` \n - - - \n **Investigating** - ";
+$cachet_incident_fixed_message="**Resolved** - The service is back online.\n\n`" . date("D, d M Y G:i T") . "` \n - - - \n **Investigating** - ";
 
 
 define('CACHET_STATUS_INVESTIGATING', 1);
