@@ -18,7 +18,7 @@ $api_key = $_SERVER['NOTIFY_PARAMETER_API_KEY'];
 if ($_SERVER['NOTIFY_PARAMETER_INCIDENT_PREFIX']) {
     $incident_prefix = $_SERVER['NOTIFY_PARAMETER_INCIDENT_PREFIX'];
 } else {
-    $incident_prefix = '[Nagios]';
+    $incident_prefix = '>';
 }
 
 $cachet_notify_subscribers = true; // Enable subscribers notifcation for incidents creation and updates
